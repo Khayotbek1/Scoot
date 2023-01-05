@@ -1,0 +1,33 @@
+.sitenav{
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    &__list{
+        display: flex;
+        margin-right: auto;
+        column-gap: 3.2rem;
+    }
+
+    &__item{
+        display: flex;
+    }
+
+    &__link{
+        @include font(1.5rem, 2.5rem, 700, $dim-grey);
+        transition: .2s;
+    }
+
+    &__link:hover{
+        color: $yellow;
+    }
+
+}
+
+// RESPONSIVE MOBILE FIRST //
+
+    @include responsive(mobile){
+        .sitenav{
+            display: none;
+        }
+    }

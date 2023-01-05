@@ -1,0 +1,124 @@
+
+// [HOME PAGE] SECTION HERO //
+.hero{
+    background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
+    url('../images/home/png/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 16rem;
+    min-height: 650px;
+    position: relative;
+
+    &__path{
+        position: absolute;
+        top: 55%;
+    }
+    &__arrow{
+        position: absolute;
+        left: 50%;
+        top: 55%;
+    }
+
+    &__title{
+        @include font(5.6rem, 5.6rem, 700, $white-color);
+        padding-top: 15.3rem;
+        margin-bottom: 4rem;
+    }
+
+    &__info{
+        display: inline-block;
+        width: 100%;
+        max-width: 405px;
+        margin-left: 9.5rem;
+    }
+
+    &__desc{
+        @include font(1.5rem, 2.5rem, 400, $white-color, $family: 'Lexend Deca');
+        margin-bottom: 4rem;
+    }
+
+    &__btn{
+        display: inline-block;
+    }
+}
+
+// RESPONSIVE [HOME PAGE] SECTION HERO  //
+
+@include responsive(tablet){
+    .hero{
+        background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
+        url('../images/home/png/tablet-hero-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &__container{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        &__path{
+            display: none;
+        }
+
+        &__arrow{
+            position: absolute;
+            left: -125px;
+            top: 73%;
+            
+        }
+
+        &__info{
+            max-width: 573px;
+            margin-left: 0;
+        }
+        
+    }
+
+}
+
+@include responsive(mobile){
+    .hero{
+        background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
+        url('../images/home/png/mobile-hero-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .bracket{
+            display: none;
+        }
+
+        &__title{
+            @include font(3.8rem, 4rem, 700, $white-color);
+            padding-top: 11.5rem;
+            margin-bottom: 2.4rem;
+            
+        }
+
+    
+        &__info{
+            display: inline-block;
+            width: 100%;
+            max-width: 311px;
+            margin-left: 0;
+            text-align: center;
+            margin-bottom: 7px;
+        }
+    
+        &__desc{
+            @include font(1.5rem, 2.5rem, 400, $white-color, $family: 'Lexend Deca');
+            margin-bottom: 3.4rem;
+        }
+
+        &__arrow{
+            left: -300px;
+            top: 73%;
+        }
+        
+    }
+
+    
+}

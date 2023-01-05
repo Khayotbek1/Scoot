@@ -1,0 +1,50 @@
+.header{
+    padding: 2.2rem 0;
+    // position: fixed;
+
+    &__container{
+        display: flex;
+        align-items: center;
+    }
+
+    &__site-logo{
+        margin-right: 5.8rem;
+        user-select: none;
+    }
+
+    &__toggle-nav-btn{
+        display: none;
+    }
+    
+
+}
+
+
+// RESPONSIVE //
+
+@include responsive(tablet){
+    .header{
+        padding: 3.5rem 4rem;
+    }
+}
+
+@include responsive(mobile){
+    .header{
+        padding-top: 2.5rem;
+
+        &__toggle-nav-btn{
+            display: inline-block;
+            border: none;
+            margin-right: 0;
+        }
+
+        &__site-logo{
+            margin-right: auto;
+            margin-left: auto;
+        }
+        &__logo-img{
+            width: 75px;
+        }
+
+    }
+}
