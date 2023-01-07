@@ -358,6 +358,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #f2f2f2;
+  overflow-x: hidden;
 }
 
 .container {
@@ -426,7 +427,7 @@ main {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .header {
     padding: 3.5rem 4rem;
   }
@@ -472,9 +473,12 @@ main {
   background-size: cover;
   background-position: center;
   margin-bottom: 16rem;
-  min-height: 650px;
+  min-height: 746px;
   position: relative;
   padding-top: 9.5rem;
+}
+.hero__container {
+  padding-top: 15.3em;
 }
 .hero__path {
   position: absolute;
@@ -491,7 +495,6 @@ main {
   font-family: "Space Mono";
   line-height: 5.6rem;
   color: #fff;
-  padding-top: 15.3rem;
   margin-bottom: 4rem;
 }
 .hero__info {
@@ -512,7 +515,7 @@ main {
   display: inline-block;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .hero {
     background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)), url("../images/home/png/tablet-hero-bg.png");
     background-repeat: no-repeat;
@@ -556,7 +559,6 @@ main {
     font-family: "Space Mono";
     line-height: 4rem;
     color: #fff;
-    padding-top: 11.5rem;
     margin-bottom: 2.4rem;
   }
   .hero__info {
@@ -577,7 +579,7 @@ main {
   }
   .hero__arrow {
     left: -300px;
-    top: 73%;
+    top: 78%;
   }
 }
 .services {
@@ -626,7 +628,7 @@ main {
   color: #939CAA;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .services__list {
     display: grid;
     grid-template-columns: repeat(1, 573px);
@@ -669,33 +671,147 @@ main {
     margin-bottom: 2.4rem;
   }
 }
-.telemetry {
-  padding-top: 100px;
+.comfortable {
+  padding-top: 10rem;
 }
-.telemetry__container {
+.comfortable__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 155px;
+}
+.comfortable__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
 }
-.telemetry__info {
+.comfortable__item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.item {
+  position: relative;
+}
+.item:first-child::before {
+  content: "";
+  background-image: url("../images/home/svg/arrow_mask.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 1084px;
+  height: 449px;
+  bottom: -3px;
+  right: -50%;
+}
+.item:nth-child(2)::before {
+  content: "";
+  background-image: url("../images/home/svg/arrow_mask-left.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 1084px;
+  height: 449px;
+  bottom: -3px;
+  left: -50%;
+}
+.item:nth-child(3)::before {
+  content: "";
+  background-image: url("../images/home/svg/arrow_mask-right.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 1084px;
+  height: 449px;
+  top: 0;
+  right: -80%;
+}
+.item__content {
   width: 100%;
   max-width: 445px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.telemetry__title {
+.item__title {
   font-size: 4.8rem;
   font-weight: 700;
   font-family: "Space Mono";
   line-height: 4.8rem;
   color: #495567;
-  letter-spacing: -2;
   opacity: 0.8;
+  letter-spacing: -2px;
   margin-bottom: 2.4rem;
 }
-.telemetry__desc {
+.item__desc {
   font-size: 1.5rem;
   font-weight: 400;
   font-family: "Lexend Deca";
   line-height: 2.5rem;
   color: #939CAA;
   margin-bottom: 4rem;
+}
+.item__img {
+  border-radius: 50%;
+  display: block;
+  width: 445px;
+  height: 445px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+  .comfortable .item {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .item__content {
+    align-items: center;
+    text-align: center;
+  }
+  .item::before {
+    top: 0;
+  }
+  .item:nth-child(3)::before {
+    right: -100%;
+  }
+  .item__img {
+    margin-bottom: 6.4rem;
+  }
+  .item__title {
+    margin-bottom: 4rem;
+  }
+  .item__desc {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 415px) {
+  .comfortable .item:first-child::before {
+    right: -215%;
+    top: -18%;
+  }
+  .comfortable .item:nth-child(2)::before {
+    top: 8%;
+    left: -153%;
+  }
+  .comfortable .item:nth-child(3)::before {
+    top: -11%;
+    right: -255%;
+  }
+  .item__img {
+    width: 311px;
+    height: 311px;
+    margin-bottom: 5.6rem;
+  }
+  .item__title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    line-height: 3.2rem;
+    color: #495567;
+    letter-spacing: -1px;
+    margin-bottom: 3.2rem;
+  }
+  .item__desc {
+    margin-bottom: 3.2rem;
+  }
+  .item:not(:last-child) {
+    margin-bottom: 12rem;
+  }
 }/*# sourceMappingURL=main.css.map */
