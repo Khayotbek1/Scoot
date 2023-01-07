@@ -1,7 +1,7 @@
 
 // FONT MIXINS //
 
-@mixin font($size, $lineHeight, $weight: 700, $color: $dark-navy, $family: 'Space Mono'){
+@mixin font($size, $lineHeight,  $color: $dark-navy, $family: 'Space Mono', $weight: 700){
     font: {
         size: $size;
         weight: $weight;
@@ -27,9 +27,9 @@
     
 }
 
-// @mixin media($device) {
-//     @media (max-width: $device){
-//         @content;
-//     }
+@mixin media($device) {
+    @media (max-width: $device){
+        @content;
+    }
 
-// }
+}

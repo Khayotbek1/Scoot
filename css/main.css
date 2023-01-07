@@ -338,6 +338,7 @@ template {
 html {
   height: 100%;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 ul, ol {
@@ -356,7 +357,6 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-family: "Space Mono";
   background-color: #f2f2f2;
 }
 
@@ -405,7 +405,11 @@ main {
   }
 }
 .header {
+  width: 100%;
   padding: 2.2rem 0;
+  background: #fff;
+  position: fixed;
+  z-index: 10;
 }
 .header__container {
   display: flex;
@@ -452,7 +456,8 @@ main {
   color: #fff;
   background-color: #FCB72B;
   border: 3px solid #FCB72B;
-  padding: 1.4rem 3.9rem;
+  display: inline-block;
+  padding: 1.3rem 3.8rem;
   transition: 0.3s;
 }
 
@@ -469,6 +474,7 @@ main {
   margin-bottom: 16rem;
   min-height: 650px;
   position: relative;
+  padding-top: 9.5rem;
 }
 .hero__path {
   position: absolute;
@@ -477,7 +483,7 @@ main {
 .hero__arrow {
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 53%;
 }
 .hero__title {
   font-size: 5.6rem;
@@ -492,7 +498,7 @@ main {
   display: inline-block;
   width: 100%;
   max-width: 405px;
-  margin-left: 9.5rem;
+  margin-left: 12rem;
 }
 .hero__desc {
   font-size: 1.5rem;
@@ -539,6 +545,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    margin-bottom: 12rem;
   }
   .hero .bracket {
     display: none;
@@ -572,4 +579,123 @@ main {
     left: -300px;
     top: 73%;
   }
+}
+.services {
+  margin-bottom: 100px;
+}
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  position: relative;
+  -moz-column-gap: 25px;
+       column-gap: 25px;
+}
+.services__item {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
+}
+.services__item::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  background-color: greenyellow;
+  width: 324px;
+  right: calc(100% - 16px);
+  top: 45px;
+}
+.services img {
+  margin-bottom: 4rem;
+  z-index: 1;
+  position: relative;
+}
+.services__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: 2.8rem;
+  color: #495567;
+  margin-bottom: 2.7rem;
+}
+.services__desc {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Lexend Deca";
+  line-height: 2.5rem;
+  color: #939CAA;
+}
+
+@media (max-width: 800px) {
+  .services__list {
+    display: grid;
+    grid-template-columns: repeat(1, 573px);
+    row-gap: 40px;
+  }
+  .services__item {
+    flex-direction: row;
+  }
+  .services img {
+    margin-right: 7.9rem;
+    margin-bottom: 0;
+  }
+  .services__item::before {
+    content: "";
+    position: absolute;
+    height: 250px;
+    background-color: greenyellow;
+    width: 15px;
+    right: calc(100% - 55px);
+    top: -123%;
+  }
+}
+@media (max-width: 415px) {
+  .services__list {
+    display: grid;
+    grid-template-columns: repeat(1, 311px);
+    row-gap: 24px;
+  }
+  .services__item {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .services__item::before {
+    display: none;
+  }
+  .services img {
+    margin-right: 0;
+    margin-bottom: 2.4rem;
+  }
+}
+.telemetry {
+  padding-top: 100px;
+}
+.telemetry__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.telemetry__info {
+  width: 100%;
+  max-width: 445px;
+}
+.telemetry__title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: 4.8rem;
+  color: #495567;
+  letter-spacing: -2;
+  opacity: 0.8;
+  margin-bottom: 2.4rem;
+}
+.telemetry__desc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Lexend Deca";
+  line-height: 2.5rem;
+  color: #939CAA;
+  margin-bottom: 4rem;
 }/*# sourceMappingURL=main.css.map */

@@ -14,7 +14,7 @@
     }
 
     &__link{
-        @include font(1.5rem, 2.5rem, 700, $dim-grey);
+        @include font(1.5rem, 2.5rem, $dim-grey);
         transition: .2s;
     }
 

@@ -8,6 +8,7 @@
     margin-bottom: 16rem;
     min-height: 650px;
     position: relative;
+    padding-top: 9.5rem;
 
     &__path{
         position: absolute;
@@ -16,11 +17,12 @@
     &__arrow{
         position: absolute;
         left: 50%;
-        top: 55%;
+        top: 53%;
+            
     }
 
     &__title{
-        @include font(5.6rem, 5.6rem, 700, $white-color);
+        @include font(5.6rem, 5.6rem, $white-color);
         padding-top: 15.3rem;
         margin-bottom: 4rem;
     }
@@ -29,12 +31,13 @@
         display: inline-block;
         width: 100%;
         max-width: 405px;
-        margin-left: 9.5rem;
+        margin-left: 12rem;
     }
 
     &__desc{
-        @include font(1.5rem, 2.5rem, 400, $white-color, $family: 'Lexend Deca');
+        @include font(1.5rem, 2.5rem, $white-color, 'Lexend Deca', 400);
         margin-bottom: 4rem;
+        
     }
 
     &__btn{
@@ -86,13 +89,14 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        margin-bottom: 12rem;
 
         .bracket{
             display: none;
         }
 
         &__title{
-            @include font(3.8rem, 4rem, 700, $white-color);
+            @include font(3.8rem, 4rem,  $white-color);
             padding-top: 11.5rem;
             margin-bottom: 2.4rem;
             
@@ -109,7 +113,7 @@
         }
     
         &__desc{
-            @include font(1.5rem, 2.5rem, 400, $white-color, $family: 'Lexend Deca');
+            @include font(1.5rem, 2.5rem, $white-color, 'Lexend Deca', 400);
             margin-bottom: 3.4rem;
         }
 
@@ -121,4 +125,128 @@
     }
 
     
+}
+
+// [HOME PAGE] SECTION SERVICES //
+
+.services{
+    margin-bottom: 100px;
+    
+    &__list{
+       display: grid;
+       grid-template-columns: repeat(auto-fill, 350px);
+       position: relative;
+       column-gap: 25px;
+    }
+   
+    &__item{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__item::before{
+        content: "";
+        position: absolute;
+        height: 15px;
+        background-color: greenyellow; 
+        width: 324px;
+        right: calc(100% - 16px);
+        top: 45px;
+    }
+    img{
+        margin-bottom: 4rem;
+        z-index: 1;
+        position: relative;
+    }
+    &__title{
+        @include font(2.4rem, 2.8rem,);
+        margin-bottom: 2.7rem;
+    }
+    &__desc{
+        @include font(1.5rem, 2.5rem, $dim-grey, 'Lexend Deca');
+    }
+}
+
+// RESPONSIVE [HOME PAGE] SERVICES SECTION
+
+@include responsive(tablet){
+    .services{
+        
+        &__list{
+            display: grid;
+            grid-template-columns: repeat(1, 573px);
+            row-gap: 40px;
+        }
+        &__item{
+            flex-direction: row;
+            
+        }
+        
+        img{
+            margin-right: 7.9rem;
+            margin-bottom: 0;
+        }
+        &__item::before{
+            content: "";
+            position: absolute;
+            height: 250px;
+            background-color: greenyellow; 
+            width: 15px;
+            right: calc(100% - 55px);
+            top: -123%;
+        }
+    }
+}
+@include responsive(mobile){
+   .services{
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(1, 311px);
+        row-gap: 24px;
+    }
+    &__item{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    &__item::before{
+        display: none;
+    }
+    img{
+        margin-right: 0;
+        margin-bottom: 2.4rem;
+    }
+   }
+}
+
+
+
+
+
+// [HOME PAGE] TeLeMetRy SECTION
+.telemetry{
+    padding-top: 100px;
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__info{
+        width: 100%;
+        max-width: 445px;
+    }
+    &__title{
+        @include font(4.8rem, 4.8rem,);
+        letter-spacing: -2;
+        opacity: 0.8;
+        margin-bottom: 2.4rem;
+    }
+    &__desc{
+        @include font(1.5rem, 2.5rem, $dim-grey, 'Lexend Deca', 400);
+        margin-bottom: 4rem;
+    }
 }
