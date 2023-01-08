@@ -202,6 +202,9 @@
 
 @include responsive(mobile){
     .values{
+        &__container{
+            overflow-x: hidden;
+        }
         &::before{
             display: none;
         }

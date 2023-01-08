@@ -873,6 +873,9 @@ main {
   .comfortable {
     margin-bottom: 16.6rem;
   }
+  .comfortable__container {
+    overflow-x: hidden;
+  }
   .comfortable__list {
     row-gap: 0;
   }
@@ -1166,6 +1169,9 @@ main {
   }
 }
 @media (max-width: 415px) {
+  .values__container {
+    overflow-x: hidden;
+  }
   .values::before {
     display: none;
   }
