@@ -400,7 +400,7 @@ main {
   color: #FCB72B;
 }
 
-@media (max-width: 415px) {
+@media (max-width: 375px) {
   .sitenav {
     display: none;
   }
@@ -432,7 +432,7 @@ main {
     padding: 3.5rem 4rem;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 375px) {
   .header {
     padding-top: 2.5rem;
   }
@@ -499,7 +499,7 @@ main {
     padding: 3.5rem 3.9rem;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 375px) {
   .footer__container {
     flex-direction: column;
     padding: 6.4rem 8.8rem;
@@ -627,7 +627,7 @@ main {
     margin-left: 0;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 375px) {
   .hero {
     background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)), url("../images/home/png/mobile-hero-bg.png");
     background-repeat: no-repeat;
@@ -738,7 +738,7 @@ main {
     top: -103%;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 375px) {
   .services__list {
     display: grid;
     grid-template-columns: repeat(1, 311px);
@@ -869,7 +869,7 @@ main {
     margin-bottom: 4rem;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 375px) {
   .comfortable {
     margin-bottom: 16.6rem;
   }
@@ -954,7 +954,7 @@ main {
     margin-bottom: 4rem;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 375px) {
   .cta__container {
     padding: 4.2rem 0 8.8rem;
     display: flex;
@@ -1056,7 +1056,7 @@ main {
     left: -50%;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 375px) {
   .about-hero {
     background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)), url("../images/about/png/mobile-hero__bg.png");
   }
@@ -1168,7 +1168,7 @@ main {
     align-items: center;
   }
 }
-@media (max-width: 415px) {
+@media (max-width: 375px) {
   .values__container {
     overflow-x: hidden;
   }

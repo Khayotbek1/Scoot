@@ -20,7 +20,7 @@
             @content;
         }
     } @else if $device == mobile {
-        @media (max-width: 415px){
+        @media (max-width: 375px){
             @content;
         }
     }
