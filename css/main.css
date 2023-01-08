@@ -871,10 +871,8 @@ main {
 }
 @media (max-width: 375px) {
   .comfortable {
-    margin-bottom: 16.6rem;
-  }
-  .comfortable__container {
     overflow-x: hidden;
+    margin-bottom: 16.6rem;
   }
   .comfortable__list {
     row-gap: 0;
@@ -1059,6 +1057,7 @@ main {
 @media (max-width: 375px) {
   .about-hero {
     background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)), url("../images/about/png/mobile-hero__bg.png");
+    overflow-x: hidden;
   }
   .about-hero__container {
     align-items: center;
@@ -1169,7 +1168,7 @@ main {
   }
 }
 @media (max-width: 375px) {
-  .values__container {
+  .values {
     overflow-x: hidden;
   }
   .values::before {

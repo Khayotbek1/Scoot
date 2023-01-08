@@ -92,6 +92,7 @@
     .about-hero{
         background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
         url('../images/about/png/mobile-hero__bg.png');
+        overflow-x: hidden;
         &__container{
             align-items: center;
             text-align: center;
@@ -202,9 +203,8 @@
 
 @include responsive(mobile){
     .values{
-        &__container{
-            overflow-x: hidden;
-        }
+        overflow-x: hidden;
+
         &::before{
             display: none;
         }

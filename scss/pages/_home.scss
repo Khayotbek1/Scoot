@@ -344,9 +344,7 @@
 
 @include responsive(mobile){
     .comfortable{
-        &__container{
-            overflow-x: hidden;
-        }
+        overflow-x: hidden;
         margin-bottom: 16.6rem;
         &__list{
             row-gap: 0;
