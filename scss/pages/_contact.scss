@@ -1,0 +1,117 @@
+.location{
+    padding-top: 12rem;
+    &__info{
+        display: flex;
+        align-items: center;
+        margin-bottom: 13.5rem;
+    }
+    
+    &__img{
+        margin-bottom: 12rem;
+    }
+    &__title{
+        @include font(4.8rem, 4.8rem);
+        letter-spacing: -2px;
+    }
+    &__desc{
+        @include font(1.5rem, 2.5rem, $dim-grey, 'Lexend Deca', 400);
+        width: 100%;
+        max-width: 445px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__btn{
+        align-content: flex-start;
+    }
+
+    .mobile-loc{
+        display: none;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.6rem;
+        margin-bottom: 7.2rem;
+        display: none;
+    }
+    &__item{
+        background: rgba(252, 183, 43, 0.15);
+        width: 100%;
+        max-width: 311px;
+        text-align: center;
+        @include font(2.4rem, 2.8rem);
+        letter-spacing: -1px;
+        padding: 22px 0;
+    }
+    
+  
+}
+
+
+@include responsive(tablet){
+    .location{
+        padding-top: 14.4rem;
+    
+        &__img{
+            width: 690px;
+            height: 337px;
+            margin-bottom: 6.4rem;
+        }
+        &__info{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        &__title{
+            margin-bottom: 3.2rem;
+            @include font(3.2rem, 3.2rem);
+        }
+        &__desc{
+            @include font(1.5rem, 2.5rem);
+            margin-bottom: 3.2rem;
+        }
+        .mobile-loc{
+            display: none;
+        }
+    }
+}
+
+@include responsive(mobile){
+    .location{
+        padding-top: 14.4rem;
+    
+        &__img{
+           display: none;
+        }
+        &__info{
+            margin-bottom: 7.2rem;
+        }
+        &__title{
+            margin-bottom: 4rem;
+        }
+        &__desc{
+            margin-bottom: 4rem;
+            max-width: 311px;
+            width: 100%;
+        }
+        .loc-brk{
+            display: none;
+        }
+        .mobile-loc{
+            display: block;
+            margin-bottom: 4rem;
+            
+        }
+        &__list{
+            display: block;
+            row-gap: 1.6rem;
+        }
+        &__item{
+            margin-bottom: 1.6rem;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 .about-hero{
     background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
-    url('../images/about/png/hero-bg.png');
+    url('../images/about/png/about-hero.png');
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
@@ -217,7 +217,20 @@
 
 
 // ACCARDION
+.faqs__container{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 6.4rem;
+}
+.work{
+    margin-bottom: 10rem;
+}
 
+.faqs__title{
+    @include font(4rem, 4.8rem);
+    letter-spacing: 1.7px;
+    padding-top: 7%;
+}
 #faq {
     max-width: 700px;
     margin: auto;
@@ -243,7 +256,7 @@
     user-select: none;
   }
   
-  #faq h1 {
+  .faqs__container h1 {
     @include font(4.8rem, 4.8rem);
     letter-spacing: -2px;
     margin-bottom: 30px;
@@ -262,7 +275,7 @@
   }
   
   #faq p {
-    @include font(1.5rem, 2.5rem, 'Lexend Deca', 400);
+    @include font(1.5rem, 2.5rem, $dark-navy, 'Lexend Deca', 400);
     text-align: left;
     position: relative;
     overflow: hidden;
@@ -349,6 +362,31 @@
   #faq ul li input[type=checkbox]:checked ~ i:after {
     transform: translate(-2px, 0) rotate(-45deg);
   }
+
+//   FAQs Responsive
+
+@include responsive(tablet){
+    .faqs__container{
+        flex-direction: column;
+    }
+    .faqs__title{
+        margin-bottom: 3.2rem;
+    }
+}
+
+@include responsive(mobile){
+    .faqs__container h1{
+        @include font(3.2rem, 3.2rem);
+    }
+    .faqs__title{
+        
+        @include font(2.4rem, 2.8rem);
+    }
+    #faq h2 {
+        @include font(1.8rem, 2.4rem);
+        letter-spacing: -0.8px;
+    }
+}
   
   
   

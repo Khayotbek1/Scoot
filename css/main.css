@@ -408,7 +408,7 @@ main {
 .header {
   width: 100%;
   padding: 2.2rem 0;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.636);
   position: fixed;
   z-index: 10;
 }
@@ -544,6 +544,7 @@ main {
   border: 3px solid #FCB72B;
   display: inline-block;
   padding: 1.3rem 3.8rem;
+  white-space: nowrap;
   transition: 0.3s;
 }
 
@@ -567,12 +568,12 @@ main {
 }
 .hero__path {
   position: absolute;
-  top: 55%;
+  top: 60%;
 }
 .hero__arrow {
   position: absolute;
   left: 50%;
-  top: 53%;
+  top: 60%;
 }
 .hero__title {
   font-size: 5.6rem;
@@ -976,8 +977,134 @@ main {
     padding: 0 2.8rem;
   }
 }
+.location {
+  padding-top: 12rem;
+}
+.location__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13.5rem;
+}
+.location__img {
+  margin-bottom: 12rem;
+}
+.location__title {
+  font-size: 4.8rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: 4.8rem;
+  color: #495567;
+  letter-spacing: -2px;
+}
+.location__desc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Lexend Deca";
+  line-height: 2.5rem;
+  color: #939CAA;
+  width: 100%;
+  max-width: 445px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.location__btn {
+  align-content: flex-start;
+}
+.location .mobile-loc {
+  display: none;
+}
+.location__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.6rem;
+  margin-bottom: 7.2rem;
+  display: none;
+}
+.location__item {
+  background: rgba(252, 183, 43, 0.15);
+  width: 100%;
+  max-width: 311px;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: 2.8rem;
+  color: #495567;
+  letter-spacing: -1px;
+  padding: 22px 0;
+}
+
+@media (max-width: 800px) {
+  .location {
+    padding-top: 14.4rem;
+  }
+  .location__img {
+    width: 690px;
+    height: 337px;
+    margin-bottom: 6.4rem;
+  }
+  .location__info {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .location__title {
+    margin-bottom: 3.2rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    line-height: 3.2rem;
+    color: #495567;
+  }
+  .location__desc {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    line-height: 2.5rem;
+    color: #495567;
+    margin-bottom: 3.2rem;
+  }
+  .location .mobile-loc {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .location {
+    padding-top: 14.4rem;
+  }
+  .location__img {
+    display: none;
+  }
+  .location__info {
+    margin-bottom: 7.2rem;
+  }
+  .location__title {
+    margin-bottom: 4rem;
+  }
+  .location__desc {
+    margin-bottom: 4rem;
+    max-width: 311px;
+    width: 100%;
+  }
+  .location .loc-brk {
+    display: none;
+  }
+  .location .mobile-loc {
+    display: block;
+    margin-bottom: 4rem;
+  }
+  .location__list {
+    display: block;
+    row-gap: 1.6rem;
+  }
+  .location__item {
+    margin-bottom: 1.6rem;
+  }
+}
 .about-hero {
-  background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)), url("../images/about/png/hero-bg.png");
+  background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)), url("../images/about/png/about-hero.png");
   background-repeat: no-repeat;
   background-size: cover;
   -o-object-fit: cover;
@@ -1185,6 +1312,26 @@ main {
     margin-left: auto;
   }
 }
+.faqs__container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 6.4rem;
+}
+
+.work {
+  margin-bottom: 10rem;
+}
+
+.faqs__title {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: 4.8rem;
+  color: #495567;
+  letter-spacing: 1.7px;
+  padding-top: 7%;
+}
+
 #faq {
   max-width: 700px;
   margin: auto;
@@ -1214,7 +1361,7 @@ section.faq {
           user-select: none;
 }
 
-#faq h1 {
+.faqs__container h1 {
   font-size: 4.8rem;
   font-weight: 700;
   font-family: "Space Mono";
@@ -1242,10 +1389,10 @@ section.faq {
 
 #faq p {
   font-size: 1.5rem;
-  font-weight: 700;
-  font-family: 400;
+  font-weight: 400;
+  font-family: "Lexend Deca";
   line-height: 2.5rem;
-  color: "Lexend Deca";
+  color: #495567;
   text-align: left;
   position: relative;
   overflow: hidden;
@@ -1353,4 +1500,110 @@ section.faq {
 
 #faq ul li input[type=checkbox]:checked ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+  .faqs__container {
+    flex-direction: column;
+  }
+  .faqs__title {
+    margin-bottom: 3.2rem;
+  }
+}
+@media (max-width: 400px) {
+  .faqs__container h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    line-height: 3.2rem;
+    color: #495567;
+  }
+  .faqs__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    line-height: 2.8rem;
+    color: #495567;
+  }
+  #faq h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    line-height: 2.4rem;
+    color: #495567;
+    letter-spacing: -0.8px;
+  }
+}
+.careers-services__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+  margin-bottom: 14rem;
+}
+.careers-services__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F2F5F9;
+}
+.careers-services__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: 2.8rem;
+  color: #495567;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+.careers-services__desc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Lexend Deca";
+  line-height: 2.5rem;
+  color: #495567;
+}
+.careers-services__info {
+  padding: 3.5rem 4rem;
+}
+.careers-services__btn {
+  margin-right: 4rem;
+}
+
+@media (max-width: 400px) {
+  .careers-services__list {
+    display: flex;
+    flex-direction: column;
+    -moz-column-gap: 1.6rem;
+         column-gap: 1.6rem;
+    margin-bottom: 14rem;
+  }
+  .careers-services__item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 31.1rem;
+    justify-content: center;
+  }
+  .careers-services__info {
+    padding-top: 3.5rem;
+    padding-right: 3.2rem;
+    padding-left: 3.2rem;
+  }
+  .careers-services__title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: "Space Mono";
+    line-height: 2.4rem;
+    color: #495567;
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+  }
+  .careers-services__desc {
+    margin-bottom: 1.6rem;
+  }
+  .careers-services__btn {
+    margin-right: 0;
+    margin-bottom: 3.2rem;
+  }
 }/*# sourceMappingURL=main.css.map */
