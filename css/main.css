@@ -1102,16 +1102,6 @@ main {
   margin-bottom: 12rem;
   position: relative;
 }
-.values::before {
-  content: "";
-  position: absolute;
-  background-image: url("../../images/about/svg/Mask.svg");
-  background-repeat: no-repeat;
-  left: -23%;
-  top: -40%;
-  width: 445px;
-  height: 445px;
-}
 .values__title {
   font-size: 4.8rem;
   font-weight: 700;
@@ -1155,12 +1145,6 @@ main {
 }
 
 @media (max-width: 800px) {
-  .values::before {
-    left: -40%;
-    top: -40%;
-    width: 445px;
-    height: 445px;
-  }
   .values__list {
     flex-direction: column;
     justify-content: center;
@@ -1170,9 +1154,6 @@ main {
 @media (max-width: 400px) {
   .values {
     overflow-x: hidden;
-  }
-  .values::before {
-    display: none;
   }
   .values__list {
     justify-content: center;
@@ -1203,4 +1184,173 @@ main {
     margin-right: auto;
     margin-left: auto;
   }
+}
+#faq {
+  max-width: 700px;
+  margin: auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+section.faq {
+  padding-top: 2em;
+  padding-bottom: 1.6rem;
+}
+
+#faq ul {
+  text-align: left;
+}
+
+.transition, p, ul li i:before, ul li i:after {
+  transition: all 0.3s;
+}
+
+#faq .no-select, #faq h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#faq h1 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: 4.8rem;
+  color: #495567;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+#faq h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: 2.8rem;
+  color: #495567;
+  letter-spacing: -1px;
+  text-align: left;
+  padding: 32px 15px 0;
+  text-transform: none;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#faq p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 400;
+  line-height: 2.5rem;
+  color: "Lexend Deca";
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  max-height: 250px;
+  will-change: max-height;
+  contain: layout;
+  display: inline-block;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 0 50px 0 15px;
+  transition: 0.3s opacity, 0.6s max-height;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  z-index: 2;
+}
+
+#faq ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+
+#faq ul li {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  /*padding-bottom: 4px;*/
+  /*padding-top: 18px;*/
+  background: #F2F5F9;
+  box-shadow: 0 3px 10px -2px rgba(0, 0, 0, 0.1);
+  -webkit-tap-highlight-color: transparent;
+}
+
+#faq ul li + li {
+  margin-top: 15px;
+}
+
+#faq ul li:last-of-type {
+  padding-bottom: 0;
+}
+
+#faq ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 28px;
+  right: 15px;
+}
+
+#faq ul li i:before, ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: #FCB72B;
+  width: 3px;
+  height: 9px;
+}
+
+#faq ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+
+#faq ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+
+#faq ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  touch-action: manipulation;
+}
+
+#faq ul li input[type=checkbox]:checked ~ h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  font-family: "Space Mono";
+  line-height: 2.8rem;
+  color: #495567;
+  letter-spacing: -1px;
+}
+
+#faq ul li input[type=checkbox]:checked ~ p {
+  /*margin-top: 0;*/
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 400;
+  line-height: 2.5rem;
+  color: "Lexend Deca";
+  max-height: 0;
+  transition: 0.3s;
+  opacity: 0;
+  /*transform: translate(0, 50%);*/
+}
+
+#faq ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+
+#faq ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
 }/*# sourceMappingURL=main.css.map */
