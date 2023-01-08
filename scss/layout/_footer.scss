@@ -1,0 +1,83 @@
+.footer{
+    background: #333A44;
+    &__container{
+        display: flex;
+        align-items: center;
+        padding: 3.5rem 0;
+    }
+    
+    &__social{
+        display: flex;
+        
+    }
+    &__social__list{
+        display: flex;
+        align-items: center;
+        column-gap: 2.4rem;
+    }
+    &__social__link svg path{
+        color: $white-color;
+        transition: .2s;
+    }
+    &__social__link svg path:hover{
+        fill: currentColor;
+    }
+}
+.footernav{
+    margin-right: auto;
+    &__list{
+        display: flex;
+        column-gap: 3.2rem;
+    }
+    &__link{
+        @include font(1.5rem, 2.5rem, $dim-grey);
+        transition: .2s;
+    }
+    
+    &__link:hover{
+        color: $yellow;
+    }
+}
+
+// ResPonSivE [HoME PaGe] Footer
+@include responsive(tablet){
+    .footer{
+        &__container{
+            padding: 3.5rem 3.9rem;
+        }
+    }
+}
+
+@include responsive(mobile){
+    .footer{
+        &__container{
+            flex-direction: column;
+            padding: 6.4rem 8.8rem;
+        }
+        &__logo{
+            margin-bottom: 4.2rem; 
+        }
+        
+    }
+    .footernav{
+        display: block;
+        margin-right: 0;
+        &__list{
+            flex-direction: column;
+            column-gap: 1.6rem;
+            margin-bottom: 8.5rem;
+            align-items: center;
+        } 
+        &__item{
+            margin-bottom: 1.6rem;
+            text-align: center;
+        }
+        &__link{
+            @include font(1.5rem, 2.5rem, $dim-grey);
+            transition: .2s;
+        }
+        &__link:hover{
+            color: $yellow;
+        }
+    }
+}

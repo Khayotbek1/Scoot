@@ -1,0 +1,231 @@
+.about-hero{
+    background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
+    url('../images/about/png/hero-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    margin-top: 100px;
+    position: relative;
+    &__container{
+        display: flex;
+        padding: 7.2rem 3rem;
+        align-items: center;
+    }
+    
+    &__title{
+        @include font(5.6rem, 5.6rem, $white-color);
+        letter-spacing: -2.5px;
+    }
+    
+    &__patter{
+        position: absolute;
+        right: 0;
+    }
+}
+.era-item{
+    position: relative;
+    margin-bottom: 0;
+    
+    &:first-child::before{
+        content: "";
+        background-image: url('../../images/about/svg/digital__mask.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 1078px;
+        height: 445px;
+        bottom: -3px;
+        right: -46%;
+    }
+    
+    &:nth-child(2)::before{
+        content: "";
+        background-image: url('../images/home/svg/arrow_mask-left.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 1084px;
+        height: 449px;
+        bottom: -26px;
+        left: -50%;
+    }
+    
+    .era-title{
+        opacity: 1;
+    }
+}
+
+// ResPonSive About page Hero section
+
+
+// ResPonSive About page comfortable section
+
+@include responsive(tablet){
+    .era-item{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        
+        
+        &:first-child::before{
+            content: "";
+            width: 1078px;
+            height: 445px;
+            bottom: 317px;
+            right: -48%;
+        }
+        
+        &:nth-child(2){
+            flex-direction: column-reverse;
+        }
+        
+        &:nth-child(2)::before{
+            width: 1084px;
+            height: 449px;
+            bottom: 39%;
+            left: -50%;
+        }
+        
+        
+    }   
+}
+
+@include responsive(mobile){
+    .about-hero{
+        background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
+        url('../images/about/png/mobile-hero__bg.png');
+        &__container{
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        &__patter{
+            display: none;
+        }
+        &__title{
+            @include font(4rem, 4rem, $white-color);
+            letter-spacing: -1.7px;
+            text-align: center;
+        }
+        
+    }
+    
+    .era-item{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        
+        
+        &:first-child::before{
+            content: "";
+            width: 1078px;
+            height: 445px;
+            bottom: 48%;
+            right: -222%;
+        }
+        
+        &:nth-child(2){
+            flex-direction: column-reverse;
+        }
+        
+        &:nth-child(2)::before{
+            width: 1084px;
+            height: 449px;
+            top: 0;
+            left: -153%;
+        }
+        
+        
+    }   
+}
+
+// [ABOUT PAGE OUR VALUES SECTION]
+
+.values{
+    margin-bottom: 12rem;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url('../../images/about/svg/Mask.svg');
+        background-repeat: no-repeat;
+        left: -23%;
+        top: -40%;
+        width: 445px;
+        height: 445px
+    }
+    &__title{
+        @include font(4.8rem, 4.8rem);
+        letter-spacing: -2px;
+        text-align: center;
+        margin-bottom: 4.8rem;
+    }
+    &__img{
+        margin-bottom: 3.2rem;
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        column-gap: 2rem;
+    }
+    &__item{
+        width: 100%;
+        max-width: 350px;
+        text-align: center;
+    }
+    &__subtitle{
+        @include font(2.4rem, 2.8rem);
+        letter-spacing: -1px;
+        margin-bottom: 2.7rem;
+    }
+    &__desc{
+        @include font(1.5rem, 2.5rem, $dim-grey, 'Lexend Deca', 400)
+    }
+}
+
+// VAlues RESPONSIve
+
+@include responsive(tablet){
+    .values{
+        &::before{
+            left: -40%;
+            top: -40%;
+            width: 445px;
+            height: 445px
+        }
+        &__list{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@include responsive(mobile){
+    .values{
+        &::before{
+            display: none;
+        }
+        &__list{
+            justify-content: center;
+        }
+        &__title{
+            @include font(3.2rem, 3.2rem,);
+            letter-spacing: -1.5px;
+            margin-bottom: 6.4rem;
+        }
+        &__item{
+            max-width: 311px;
+            text-align: center;
+        }
+        &__subtitle{
+            @include font(2.4rem, 2.8rem)
+        }
+       
+        &__img{
+            width: 240px;
+            height: 240px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}
