@@ -1076,7 +1076,7 @@ main {
 }
 @media (max-width: 700px) {
   .location {
-    padding-top: 14.4rem;
+    padding-top: 7.2rem;
   }
   .location__img {
     display: none;
@@ -1098,13 +1098,22 @@ main {
   .location .mobile-loc {
     display: block;
     margin-bottom: 4rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
   }
   .location__list {
     display: block;
     row-gap: 1.6rem;
+    align-items: center;
+    text-align: center;
   }
   .location__item {
     margin-bottom: 1.6rem;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
   }
 }
 .about-hero {

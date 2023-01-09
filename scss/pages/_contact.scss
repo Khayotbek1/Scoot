@@ -82,7 +82,7 @@
 
 @include responsive(mobile){
     .location{
-        padding-top: 14.4rem;
+        padding-top: 7.2rem;
     
         &__img{
            display: none;
@@ -104,14 +104,23 @@
         .mobile-loc{
             display: block;
             margin-bottom: 4rem;
-            
+            margin-right: auto;
+            margin-left: auto;
+            padding: 0;
         }
         &__list{
             display: block;
             row-gap: 1.6rem;
+            align-items: center;
+            text-align: center;
+            
         }
         &__item{
             margin-bottom: 1.6rem;
+            align-items: center;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
         }
     }
 }
