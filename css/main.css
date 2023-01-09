@@ -378,6 +378,7 @@ main {
   display: flex;
   align-items: center;
   flex: 1;
+  display: none;
 }
 .sitenav__list {
   display: flex;
@@ -393,11 +394,14 @@ main {
   font-weight: 700;
   font-family: "Space Mono";
   line-height: 2.5rem;
-  color: #939CAA;
+  color: #939caa;
   transition: 0.2s;
 }
 .sitenav__link:hover {
-  color: #FCB72B;
+  color: #fcb72b;
+}
+.sitenav--block {
+  display: block;
 }
 
 @media (max-width: 650px) {
@@ -487,11 +491,11 @@ main {
   font-weight: 700;
   font-family: "Space Mono";
   line-height: 2.5rem;
-  color: #939CAA;
+  color: #939caa;
   transition: 0.2s;
 }
 .footernav__link:hover {
-  color: #FCB72B;
+  color: #fcb72b;
 }
 
 @media (max-width: 800px) {
@@ -527,11 +531,11 @@ main {
     font-weight: 700;
     font-family: "Space Mono";
     line-height: 2.5rem;
-    color: #939CAA;
+    color: #939caa;
     transition: 0.2s;
   }
   .footernav__link:hover {
-    color: #FCB72B;
+    color: #fcb72b;
   }
 }
 .btn {
@@ -540,8 +544,8 @@ main {
   font-family: "Space Mono";
   line-height: 2.5rem;
   color: #fff;
-  background-color: #FCB72B;
-  border: 3px solid #FCB72B;
+  background-color: #fcb72b;
+  border: 3px solid #fcb72b;
   display: inline-block;
   padding: 1.3rem 3.8rem;
   white-space: nowrap;
@@ -550,8 +554,8 @@ main {
 
 .btn:hover {
   background-color: transparent;
-  border: 3px solid #FCB72B;
-  color: #FCB72B;
+  border: 3px solid #fcb72b;
+  color: #fcb72b;
 }
 
 .hero {
@@ -592,7 +596,7 @@ main {
 .hero__desc {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Lexend Deca";
+  font-family: "lexend deca";
   line-height: 2.5rem;
   color: #fff;
   margin-bottom: 4rem;
@@ -660,7 +664,7 @@ main {
   .hero__desc {
     font-size: 1.5rem;
     font-weight: 400;
-    font-family: "Lexend Deca";
+    font-family: "lexend deca";
     line-height: 2.5rem;
     color: #fff;
     margin-bottom: 3.4rem;
@@ -690,7 +694,7 @@ main {
   content: "";
   position: absolute;
   height: 15px;
-  background-color: #E5ECF4;
+  background-color: #e5ecf4;
   width: 324px;
   right: calc(100% - 16px);
   top: 45px;
@@ -711,9 +715,9 @@ main {
 .services__desc {
   font-size: 1.5rem;
   font-weight: 700;
-  font-family: "Lexend Deca";
+  font-family: "lexend deca";
   line-height: 2.5rem;
-  color: #939CAA;
+  color: #939caa;
 }
 
 @media (max-width: 800px) {
@@ -733,7 +737,7 @@ main {
     content: "";
     position: absolute;
     height: 250px;
-    background-color: greenyellow;
+    background-color: #e5ecf4;
     width: 15px;
     right: calc(100% - 55px);
     top: -103%;
@@ -831,9 +835,9 @@ main {
 .item__desc {
   font-size: 1.5rem;
   font-weight: 400;
-  font-family: "Lexend Deca";
+  font-family: "lexend deca";
   line-height: 2.5rem;
-  color: #939CAA;
+  color: #939caa;
   margin-bottom: 4rem;
 }
 .item__img {
@@ -1001,7 +1005,7 @@ main {
   font-weight: 400;
   font-family: "Lexend Deca";
   line-height: 2.5rem;
-  color: #939CAA;
+  color: #939caa;
   width: 100%;
   max-width: 445px;
   margin-right: auto;
@@ -1183,8 +1187,7 @@ main {
 }
 @media (max-width: 650px) {
   .about-hero {
-    background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)), url("../images/about/png/mobile-hero__bg.png");
-    overflow-x: hidden;
+    background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)), url("../../images/about/png/mobile-hero__bg.png");
   }
   .about-hero__container {
     align-items: center;
@@ -1268,7 +1271,7 @@ main {
   font-weight: 400;
   font-family: "Lexend Deca";
   line-height: 2.5rem;
-  color: #939CAA;
+  color: #939caa;
 }
 
 @media (max-width: 800px) {
@@ -1449,7 +1452,7 @@ section.faq {
 #faq ul li i:before, ul li i:after {
   content: "";
   position: absolute;
-  background-color: #FCB72B;
+  background-color: #fcb72b;
   width: 3px;
   height: 9px;
 }
