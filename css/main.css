@@ -754,13 +754,24 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-right: auto;
+    margin-left: auto;
   }
   .services__item::before {
     display: none;
   }
   .services img {
-    margin-right: 0;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 2.4rem;
+  }
+  .services__title {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .services__desc {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 .comfortable {
@@ -876,7 +887,6 @@ main {
 }
 @media (max-width: 700px) {
   .comfortable {
-    overflow-x: hidden;
     margin-bottom: 16.6rem;
   }
   .comfortable__list {
@@ -1588,6 +1598,7 @@ section.faq {
     -moz-column-gap: 1.6rem;
          column-gap: 1.6rem;
     margin-bottom: 14rem;
+    align-items: center;
   }
   .careers-services__item {
     flex-direction: column;
