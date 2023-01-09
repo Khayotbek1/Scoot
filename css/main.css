@@ -800,7 +800,6 @@ main {
 .comfortable {
   padding-top: 10rem;
   margin-bottom: 32.9rem;
-  overflow-x: hidden;
 }
 .comfortable__list {
   display: flex;
@@ -1023,6 +1022,8 @@ main {
 }
 .location__img {
   margin-bottom: 12rem;
+  width: 100%;
+  max-width: 1110px;
 }
 .location__title {
   font-size: 4.8rem;
@@ -1324,9 +1325,6 @@ main {
   }
 }
 @media (max-width: 700px) {
-  .values {
-    overflow-x: hidden;
-  }
   .values__list {
     justify-content: center;
   }
