@@ -802,8 +802,6 @@ main {
   background-image: url("../images/home/svg/arrow_mask.svg");
   background-repeat: no-repeat;
   position: absolute;
-  width: 1084px;
-  height: 449px;
   bottom: -3px;
   right: -50%;
 }
