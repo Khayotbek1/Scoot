@@ -209,14 +209,11 @@
             display: grid;
             grid-template-columns: repeat(1, 311px);
             row-gap: 24px;
+            justify-content: center;
         }
         &__item{
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            margin-right: auto;
-            margin-left: auto;
         }
         &__item::before{
             display: none;

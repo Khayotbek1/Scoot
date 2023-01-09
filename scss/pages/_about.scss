@@ -368,6 +368,7 @@
 @include responsive(tablet){
     .faqs__container{
         flex-direction: column;
+        align-items: center;
     }
     .faqs__title{
         margin-bottom: 3.2rem;

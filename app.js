@@ -1,5 +1,5 @@
 const toggleBtn = document.querySelector(".toggle");
-const nav = document.querySelector(".sitenav");
+const nav = document.querySelector(".sidebar");
 
 toggleBtn.addEventListener("click", () => {
     nav.classList.toggle("show");

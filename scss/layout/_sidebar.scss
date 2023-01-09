@@ -1,0 +1,24 @@
+.sidebar{
+    position: absolute;
+    width: 70%;
+    height: 85vh;
+    top: 77px;
+    left: 0;
+    background-color: #333A44;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6.4rem 0 2.4rem 3.2rem ;
+    
+    ul{
+        flex-direction: column;
+        gap: 24px;
+    }
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+.show{
+    transform: translateX(0);
+
+}

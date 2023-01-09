@@ -359,6 +359,7 @@ body {
   flex-direction: column;
   background-color: #f2f2f2;
   overflow-x: hidden;
+  position: relative;
 }
 
 .container {
@@ -538,6 +539,30 @@ main {
     color: #fcb72b;
   }
 }
+.sidebar {
+  position: absolute;
+  width: 70%;
+  height: 85vh;
+  top: 77px;
+  left: 0;
+  background-color: #333A44;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 6.4rem 0 2.4rem 3.2rem;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+.sidebar ul {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.show {
+  transform: translateX(0);
+}
+
 .btn {
   font-size: 1.5rem;
   font-weight: 700;
@@ -749,14 +774,11 @@ main {
     display: grid;
     grid-template-columns: repeat(1, 311px);
     row-gap: 24px;
+    justify-content: center;
   }
   .services__item {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
   }
   .services__item::before {
     display: none;
@@ -1528,6 +1550,7 @@ section.faq {
 @media (max-width: 800px) {
   .faqs__container {
     flex-direction: column;
+    align-items: center;
   }
   .faqs__title {
     margin-bottom: 3.2rem;
