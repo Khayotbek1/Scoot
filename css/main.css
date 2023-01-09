@@ -378,7 +378,6 @@ main {
   display: flex;
   align-items: center;
   flex: 1;
-  display: none;
 }
 .sitenav__list {
   display: flex;
