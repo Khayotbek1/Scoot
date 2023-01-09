@@ -778,6 +778,7 @@ main {
 .comfortable {
   padding-top: 10rem;
   margin-bottom: 32.9rem;
+  overflow-x: hidden;
 }
 .comfortable__list {
   display: flex;
