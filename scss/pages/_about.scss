@@ -93,6 +93,7 @@
         background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)),
         url('../../images/about/png/mobile-hero__bg.png');
         // overflow-x: hidden;
+        margin-top: 77px;
         &__container{
             align-items: center;
             text-align: center;
@@ -189,7 +190,6 @@
     .values{
         overflow-x: hidden;
 
-       
         &__list{
             justify-content: center;
         }

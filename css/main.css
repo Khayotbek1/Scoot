@@ -438,7 +438,7 @@ main {
 }
 @media (max-width: 700px) {
   .header {
-    padding-top: 2.5rem;
+    padding-top: 2.2rem;
   }
   .header__toggle-nav-btn {
     display: inline-block;
@@ -611,6 +611,7 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding-top: 0;
   }
   .hero__container {
     display: flex;
@@ -887,7 +888,7 @@ main {
 }
 @media (max-width: 700px) {
   .comfortable {
-    margin-bottom: 16.6rem;
+    margin-bottom: 12rem;
   }
   .comfortable__list {
     row-gap: 0;
@@ -1207,6 +1208,7 @@ main {
 @media (max-width: 700px) {
   .about-hero {
     background: linear-gradient(rgba(47, 59, 89, 0.75), rgba(47, 59, 89, 0.75)), url("../../images/about/png/mobile-hero__bg.png");
+    margin-top: 77px;
   }
   .about-hero__container {
     align-items: center;

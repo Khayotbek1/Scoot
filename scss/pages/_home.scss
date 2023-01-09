@@ -57,6 +57,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        padding-top: 0;
         
         &__container{
             display: flex;
@@ -355,7 +356,7 @@
 
 @include responsive(mobile){
     .comfortable{
-        margin-bottom: 16.6rem;
+        margin-bottom: 12rem;
         &__list{
             row-gap: 0;
         }
